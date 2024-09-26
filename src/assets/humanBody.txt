@@ -205,7 +205,7 @@
       points="491,97,498,122,497,138,484,183,453,173,453,162,478,134,485,104"
     />
   </g>
-  <g id="triceps" className="hover:fill-white">
+  <g id="group_triceps1" className="hover:fill-white">
     <polygon
       id="Left_Triceps_Lateral"
       points="392,123,371,137,363,176,368,198,380,156,392,137"
@@ -215,16 +215,12 @@
       points="502,124,522,137,531,178,525,199,512,154,501,137"
     />
     <polygon
-      id="Left_Triceps_Medial"
-      points="9392,-118143,9392,-118167,9383,-118183,9374,-118188,9382,-118160"
-    />
-    <polygon
       id="Right_Triceps_Medial"
       points="500,143,510,158,518,188,509,183,500,168"
     />
     <polygon
       id="Right_Triceps_Medial-7"
-      points="500,168 500,143 510,158 518,188 509,183 "
+      points="500,168,500,143,510,158,518,188,509,183 "
       transform="matrix(-1,0,0,1,892.37226,1.3225433)"
     />
   </g>

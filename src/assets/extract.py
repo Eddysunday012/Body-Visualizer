@@ -41,15 +41,21 @@ if root:
     mainVals = []
     for child in root: 
         if child.tag == 'g':
-            val = {'bodyName': child.attrib["id"], 'polygons': []}
+            val = {'bodyName': child.attrib["id"], 'polygons': [], 'clickable': False}
+
             if 'className' in child.attrib.keys():
-                val['className']=child.attrib['className']
+                val['className']="hover:fill-[#e6757b]"
+                val['clickable'] = True
+
             for c in child:
-                polygonAttr = {'id': c.attrib['id'], 'points': c.attrib['points']}
+                polygonAttr = {'id': c.attrib['id'], 'points': c.attrib['points'], 'className': 'stroke-blue-950', 'stroke-width': '1'}
                 if 'transform' in c.attrib.keys():
                     polygonAttr['transform']= c.attrib['transform']
+
                 val['polygons'].append(polygonAttr)
+
             mainVals.append(val)
+
     with open("humanBody.json", "w") as f:
         json.dump(mainVals, f)
 else:
