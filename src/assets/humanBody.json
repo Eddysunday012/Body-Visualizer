@@ -316,7 +316,7 @@
     "className": "hover:fill-[#e6757b]"
   },
   {
-    "bodyName": "deltoids",
+    "bodyName": "readDeltoids",
     "polygons": [
       {
         "id": "Left_Deltoids_Back",
@@ -405,7 +405,7 @@
     "className": "hover:fill-[#e6757b]"
   },
   {
-    "bodyName": "forearms_back",
+    "bodyName": "forearmsBack",
     "polygons": [
       {
         "id": "Right_Extensor_Digitorum",
@@ -559,4 +559,3 @@
     "clickable": false
   }
 ]
-

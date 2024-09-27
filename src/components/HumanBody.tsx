@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 interface Polygon {
   id: string;
@@ -21,6 +22,33 @@ interface BodyProps {
 }
 
 export default function Body({ bodyparts, className }: BodyProps) {
+  const [selectedBody, setSelectedBody] = useState<Record<string, boolean>>({
+    deltoids: false,
+    biceps: false,
+    forearms: false,
+    triceps: false,
+    rearDeltoids: false,
+    traps: false,
+    lats: false,
+    lowerBack: false,
+    glutes: false,
+    hamstrings: false,
+    calves: false,
+    forearmsBack: false,
+    quads: false,
+    shins: false,
+    core: false,
+    obliques: false,
+    chest: false,
+  });
+
+  const handleClick = (bodyPart: string) => {
+    setSelectedBody((prevSelectedBody) => ({
+      ...prevSelectedBody,
+      [bodyPart]: !prevSelectedBody[bodyPart],
+    }));
+  };
+
   return (
     <svg
       version="1.1"
@@ -35,8 +63,12 @@ export default function Body({ bodyparts, className }: BodyProps) {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.9 }}
             id={item.bodyName}
-            className={item.className}
+            className={selectedBody[item.bodyName] ? "fill-[#e6757b]" : ""}
             key={index}
+            style={{ outline: "none" }}
+            onClick={() => {
+              handleClick(item.bodyName);
+            }}
           >
             {item.polygons.map((part, index) => (
               <polygon
