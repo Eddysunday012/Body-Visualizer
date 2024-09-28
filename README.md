@@ -11,4 +11,4 @@ A human body visualizer with an interactive UI to learn about the body. This pro
   - [x] Add hover effect
   - [x] Add click effect
 - [x] Make it so it corresponds to data value when clicked
-- [] Add other card to show data when clicked
+- [ ] Add other card to show data when clicked
